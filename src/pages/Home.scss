@@ -1,0 +1,149 @@
+.card {
+  cursor: pointer;
+}
+
+.card-layout {
+  margin: 0 auto;
+  max-width: 1300px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 30px;
+  padding: 6em 4em;
+}
+
+.card-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 0;
+  line-height: 1.8em;
+
+  button {
+    color: white;
+    background-color: black;
+    border-radius: 4px;
+    border: 0.1px solid white;
+    margin-left: 3em;
+    align-self: flex-start;
+    padding: 0.5em 1em;
+  }
+}
+
+.add-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.banner {
+  background-image: url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80");
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+  padding: 8em 0;
+
+  input {
+    background-color: grey;
+    padding: 0.9em 0.9em;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    margin-right: 5px;
+  }
+
+  button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 0.9em 4.4em;
+    text-transform: uppercase;
+    border-radius: 5px;
+  }
+}
+
+.inner-banner {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1300px;
+  &__form {
+    display: flex;
+    margin-top: 2em;
+  }
+}
+
+@media (min-width: 800px) {
+  .card-layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1300px) {
+  .card-layout {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.movie-details {
+  background-color: rgb(29, 23, 23);
+  &__date-runtime {
+    p {
+      color: red;
+      padding: 1rem 0;
+      padding-left: 1rem;
+    }
+  }
+
+  &__container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  img {
+    width: 30%;
+    height: 60vh;
+    min-height: 300px;
+    object-fit: cover;
+    margin-right: 4rem;
+  }
+
+  span {
+    border: 1px white solid;
+    color: green;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    margin-left: 3rem;
+  }
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.sort-movies {
+  background-color: black;
+  color: white;
+  border: 3px black solid;
+  padding: 1rem;
+  option {
+    background-color: black;
+    text-transform: uppercase;
+  }
+}
